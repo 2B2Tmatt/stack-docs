@@ -1,0 +1,39 @@
+package pages
+
+import "docs-site/web/templates/layout"
+import "docs-site/web/templates/partials"
+
+templ Go(initProject, simpleServer, runProgram, jsonStruct, errorHandling string) {
+	@layout.BaseLayout("Go") {
+		<h1>Go</h1>
+		<p>
+			I like Go because it is strongly and statically typed, compiles to a single binary,
+			and is simple to read and write.
+		</p>
+		<p>
+			It gives me enough structure to feel confident about correctness, without adding
+			unnecessary abstraction or tooling overhead.
+		</p>
+		<p>
+			Below are a few small examples that show the kind of server-side code I enjoy writing
+			with Go.
+		</p>
+		<h3>Setting up a project workspace</h3>
+		@partials.CodeBlock("bash", initProject)
+		<p>This creates a go.mod file which manages a project's dependencies</p>
+		<h3>Creating a Simple Server</h3>
+		@partials.CodeBlock("go", simpleServer)
+		<p>To execute the program:</p>
+		@partials.CodeBlock("bash", runProgram)
+	}
+	<h3>Data Transformation</h3>
+	<p>Data transfer typically revolves around struct tags which specify how data maps from JSON and other formats</p>
+	@partials.CodeBlock("go", jsonStruct)
+	<h3>Error Handling</h3>
+	<p>Go favors returning errors as values, leading to explicit error handling which I prefer over exceptions</p>
+	@partials.CodeBlock("go", errorHandling)
+	<nav>
+		<a href="/docs/intro">← Introduction</a>
+		<a href="/docs/templ">Templ →</a>
+	</nav>
+}

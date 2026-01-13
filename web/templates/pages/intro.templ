@@ -1,0 +1,56 @@
+package pages 
+
+import "docs-site/web/templates/layout"
+
+templ Intro() {
+	@layout.BaseLayout("Introduction") {
+		<h1>Introduction</h1>
+		<p>
+			Hello, I'm Matt — a freshman studying computer science.
+		</p>
+		<p>
+			Welcome to my stack-docs. This site is a small, intentional project where I document
+			the tools and ideas I’m actively using and learning.
+		</p>
+		<h2>Why I made this</h2>
+		<ul>
+			<li>
+				<strong>To learn:</strong> I’m still early in my journey with these technologies, and
+				writing things down forces me to actually understand them.
+			</li>
+			<li>
+				<strong>To have fun:</strong> I realized I wasn’t enjoying frontend development very much,
+				and I wanted to try a stack that feels lighter and more to the point.
+			</li>
+		</ul>
+		<h2>What is this stack?</h2>
+		<p>
+			I present to you the <strong>GOTHC</strong> stack, comprised of:
+		</p>
+		<ul>
+			<li><strong>Go</strong>lang</li>
+			<li><strong>T</strong>empl</li>
+			<li><strong>H</strong>tmx</li>
+			<li><strong>C</strong>hi</li>
+		</ul>
+		<h2>Why this stack?</h2>
+		<ul>
+			<li>
+				I didn’t enjoy the dependency-heavy development environment that came with modern
+				React setups.
+			</li>
+			<li>
+				I’m interested in a more server-driven model where I can trust the server over the client and keep updates small and intentional, as opposed to huge re-renders.
+			</li>
+			<li>
+				I like Go’s clarity and explicitness, and I wanted the rest of the stack to feel the same.
+			</li>
+		</ul>
+		<p>
+			I mentioned the core technologies of this stack, used for building web pages. I will also include tools I use for development and deployment, more on this later.
+		</p>
+		<nav>
+			<a href="/docs/go">Go →</a>
+		</nav>
+	}
+}

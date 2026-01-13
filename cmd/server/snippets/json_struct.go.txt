@@ -1,0 +1,15 @@
+type User struct {
+	ID    int    `json:"id"`
+	Email string `json:"email"`
+}
+
+func main() {
+	jsonData := `{"id": 101, "email": "dev@example.com"}`
+	var u User
+
+	// Built-in high-performance JSON handling
+	if err := json.Unmarshal([]byte(jsonData), &u); err != nil {
+		panic(err)
+	}
+	fmt.Printf("Parsed User: %+v\n", u)
+}

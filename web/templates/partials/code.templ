@@ -1,0 +1,9 @@
+package partials 
+
+templ CodeBlock(lang string, code string) {
+	<pre>
+		<code class={ "language-" + lang }>
+			{ code }
+		</code>
+	</pre>
+}

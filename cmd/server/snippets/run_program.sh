@@ -1,0 +1,1 @@
+go run main.go #compiles the program into a binary and runs it

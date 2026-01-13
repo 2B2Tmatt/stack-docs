@@ -1,0 +1,17 @@
+func processData(val int) (int, error) {
+    if val < 0 {
+        // Return clear, predictable error values
+        return 0, fmt.Errorf("invalid value: %d", val)
+    }
+    return val * 2, nil
+}
+
+func main() {
+    res, err := processData(-1)
+    if err != nil {
+        // Errors are values you must handle, not invisible exceptions
+        fmt.Println("Error occurred:", err)
+        return
+    }
+    fmt.Println("Result:", res)
+}

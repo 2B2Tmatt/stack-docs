@@ -1,0 +1,12 @@
+package pages
+
+import "docs-site/web/templates/layout"
+
+templ Templ() {
+	@layout.BaseLayout("Templ") {
+		<h1>Templ</h1>
+		<p>Templ is an HTML templating language for Go.</p>
+		<p>.templ files are compiled into performant Go code which allows for compile-time error checking.</p>
+		<p>Templ encourages the use of reusable components, similar to frameworks like React.</p>
+	}
+}

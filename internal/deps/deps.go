@@ -1,13 +1,18 @@
 package deps
 
-import "net/http"
+import (
+	"io/fs"
+	"net/http"
+)
 
 type Deps struct {
-	AssetsFS http.FileSystem
+	AssetsFS   http.FileSystem
+	SnippetsFS fs.FS
 }
 
-func New() *Deps {
+func New(snippets fs.FS) *Deps {
 	return &Deps{
-		AssetsFS: http.Dir("web/static"),
+		AssetsFS:   http.Dir("web/static"),
+		SnippetsFS: snippets,
 	}
 }

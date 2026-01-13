@@ -15,7 +15,7 @@ import (
 const addr = ":8080"
 
 func main() {
-	d := deps.New()
+	d := deps.New(SnippetsFS())
 	h := handlers.New(d)
 
 	r := chi.NewRouter()
